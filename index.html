@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <meta
+    name="description"
+    content="Waheeb Yaqub, PhD — Human-Computer Interaction researcher studying information credibility, misinformation, scientific information integrity, social media, and human-centred technologies."
+  >
+
   <title>Waheeb Yaqub | Academic Profile</title>
 
   <style>
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
       margin: 0;
@@ -15,12 +27,20 @@
       line-height: 1.6;
     }
 
+    /* =========================
+       NAVIGATION
+    ========================= */
+
     nav {
       padding: 20px 8%;
       border-bottom: 1px solid #e5e5e5;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     nav .name {
@@ -35,18 +55,24 @@
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: #b64027;
     }
+
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
       max-width: 1000px;
-      margin: 80px auto;
+      margin: 85px auto;
       padding: 0 30px;
     }
 
     .hero h1 {
       font-size: 48px;
       margin-bottom: 5px;
+      line-height: 1.15;
     }
 
     .hero h2 {
@@ -58,9 +84,58 @@
 
     .intro {
       font-size: 21px;
-      max-width: 780px;
+      max-width: 800px;
       margin-top: 35px;
+      color: #333;
     }
+
+
+    /* =========================
+       HERO BUTTONS
+    ========================= */
+
+    .hero-buttons {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 16px;
+      border: 1px solid #d5d5d5;
+      border-radius: 6px;
+      color: #333;
+      background: #ffffff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .button:hover {
+      border-color: #999;
+      color: #b64027;
+      transform: translateY(-1px);
+    }
+
+    .button.primary {
+      background: #b64027;
+      border-color: #b64027;
+      color: white;
+    }
+
+    .button.primary:hover {
+      background: #92331f;
+      border-color: #92331f;
+      color: white;
+    }
+
+
+    /* =========================
+       SECTIONS
+    ========================= */
 
     section {
       max-width: 1000px;
@@ -75,6 +150,20 @@
       margin-bottom: 30px;
     }
 
+    section a {
+      color: #b64027;
+      text-decoration: none;
+    }
+
+    section a:hover {
+      text-decoration: underline;
+    }
+
+
+    /* =========================
+       RESEARCH CARDS
+    ========================= */
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -85,30 +174,89 @@
       border: 1px solid #ddd;
       padding: 25px;
       border-radius: 8px;
+      background: #ffffff;
+      transition: all 0.2s ease;
+    }
+
+    .card:hover {
+      border-color: #bbb;
+      transform: translateY(-2px);
     }
 
     .card h3 {
       margin-top: 0;
+      margin-bottom: 10px;
     }
 
+    .card p {
+      margin-bottom: 0;
+      color: #555;
+    }
+
+
+    /* =========================
+       PROJECTS
+    ========================= */
+
     .project {
-      margin-bottom: 30px;
+      margin-bottom: 35px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .project:last-child {
+      border-bottom: none;
     }
 
     .project h3 {
       margin-bottom: 5px;
+      font-size: 21px;
     }
+
+    .project p {
+      color: #555;
+      max-width: 850px;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-links p {
+      margin: 8px 0;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       margin-top: 80px;
       padding: 35px 8%;
       border-top: 1px solid #ddd;
       color: #555;
+      font-size: 14px;
     }
 
+
+    /* =========================
+       MOBILE
+    ========================= */
+
     @media (max-width: 700px) {
+
       .hero h1 {
         font-size: 36px;
+      }
+
+      .hero h2 {
+        font-size: 19px;
+      }
+
+      .intro {
+        font-size: 18px;
       }
 
       nav {
@@ -123,179 +271,485 @@
       nav a {
         margin-left: 0;
         margin-right: 15px;
+        display: inline-block;
+        margin-bottom: 8px;
+      }
+
+      .hero-buttons {
+        gap: 10px;
+      }
+
+      .button {
+        padding: 9px 13px;
       }
     }
+
   </style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
 <nav>
-  <div class="name">Waheeb Yaqub</div>
+
+  <div class="name">
+    Waheeb Yaqub
+  </div>
 
   <div class="links">
-    <a href="#research">Research</a>
-    <a href="#projects">Projects</a>
-    <a href="#publications">Publications</a>
-    <a href="#teaching">Teaching</a>
-    <a href="#contact">Contact</a>
+
+    <a href="#research">
+      Research
+    </a>
+
+    <a href="#projects">
+      Projects
+    </a>
+
+    <a href="#publications">
+      Publications
+    </a>
+
+    <a href="#teaching">
+      Teaching
+    </a>
+
+    <a href="#contact">
+      Contact
+    </a>
+
   </div>
+
 </nav>
 
 
+
+<!-- =========================
+     HERO
+========================= -->
+
 <div class="hero">
 
-  <h1>Waheeb Yaqub, PhD</h1>
+  <h1>
+    Waheeb Yaqub, PhD
+  </h1>
 
   <h2>
-    Human-Computer Interaction Researcher<br>
+    Human-Computer Interaction Researcher
+    <br>
     School of Computer Science · The University of Sydney
   </h2>
 
   <p class="intro">
+
     I study how people judge and interact with information in digital
     environments. My research focuses on information credibility,
     misinformation, scientific information integrity, social media,
     and human-centred technologies.
+
   </p>
+
+
+  <div class="hero-buttons">
+
+    <a
+      class="button primary"
+      href="https://scholar.google.com/citations?user=47rTe_AAAAAJ&amp;hl=en"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Google Scholar
+    </a>
+
+
+    <a
+      class="button"
+      href="https://orcid.org/0000-0002-7506-3204"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      ORCID
+    </a>
+
+
+    <a
+      class="button"
+      href="https://www.linkedin.com/in/waheebyaqub/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      LinkedIn
+    </a>
+
+
+    <a
+      class="button"
+      href="https://github.com/waheebyaqub"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      GitHub
+    </a>
+
+
+    <a
+      class="button"
+      href="mailto:waheeb.faizmohammad@sydney.edu.au"
+    >
+      Email
+    </a>
+
+  </div>
 
 </div>
 
 
+
+<!-- =========================
+     RESEARCH
+========================= -->
+
 <section id="research">
 
-  <h2 class="section-title">Research</h2>
+  <h2 class="section-title">
+    Research
+  </h2>
+
 
   <div class="grid">
 
+
     <div class="card">
-      <h3>Information Credibility</h3>
+
+      <h3>
+        Information Credibility
+      </h3>
+
       <p>
         Understanding how people assess the credibility of online
         information and the cues that shape those judgements.
       </p>
+
     </div>
 
+
     <div class="card">
-      <h3>Scientific Information Integrity</h3>
+
+      <h3>
+        Scientific Information Integrity
+      </h3>
+
       <p>
-        Investigating how retractions, corrections and changes in
+        Investigating how retractions, corrections, and changes in
         scientific evidence are communicated across digital platforms.
       </p>
+
     </div>
 
+
     <div class="card">
-      <h3>Misinformation & Social Media</h3>
+
+      <h3>
+        Misinformation &amp; Social Media
+      </h3>
+
       <p>
         Studying how misinformation spreads and how interface design
         can support more informed decisions.
       </p>
+
     </div>
 
+
     <div class="card">
-      <h3>Human-AI Interaction</h3>
+
+      <h3>
+        Human-AI Interaction
+      </h3>
+
       <p>
-        Exploring credibility, transparency and information evaluation
+        Exploring credibility, transparency, and information evaluation
         in AI-mediated environments.
       </p>
+
     </div>
+
 
   </div>
 
 </section>
 
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
 
 <section id="projects">
 
-  <h2 class="section-title">Selected Projects</h2>
+  <h2 class="section-title">
+    Selected Projects
+  </h2>
+
 
   <div class="project">
-    <h3>Scientific Retractions & Social Media</h3>
+
+    <h3>
+      Scientific Retractions &amp; Social Media
+    </h3>
+
     <p>
       Understanding how people evaluate social-media news based on
-      scientific research that has subsequently been retracted.
+      scientific research that has subsequently been retracted, and
+      investigating how interface cues can communicate changes in
+      scientific status.
     </p>
+
   </div>
 
+
   <div class="project">
-    <h3>Retraction Visibility at Web Scale</h3>
+
+    <h3>
+      Retraction Visibility at Web Scale
+    </h3>
+
     <p>
       Investigating whether retraction information remains visible as
-      scientific findings move across publishers, news and online platforms.
+      scientific findings move across publishers, scholarly databases,
+      news, social media, and other online environments.
     </p>
+
   </div>
 
+
   <div class="project">
-    <h3>Retract Trace</h3>
+
+    <h3>
+      Retract Trace
+    </h3>
+
     <p>
-      Developing human-centred approaches for communicating changes
-      in the status of scientific evidence.
+      Developing human-centred approaches for tracing scientific claims
+      and communicating changes in the status of the underlying evidence.
     </p>
+
   </div>
 
+
   <div class="project">
-    <h3>Credibility Assessment Methods</h3>
+
+    <h3>
+      Credibility Assessment Methods
+    </h3>
+
     <p>
       Studying how research methods such as think-aloud studies and
-      crowdsourcing influence observed credibility judgements.
+      crowdsourcing influence observed credibility behaviours and
+      judgements.
     </p>
+
   </div>
+
+
+  <div class="project">
+
+    <h3>
+      Comment Summarisation &amp; Credibility
+    </h3>
+
+    <p>
+      Exploring how summaries and representations of social commentary
+      around online claims influence people's understanding and
+      perceptions of news credibility.
+    </p>
+
+  </div>
+
 
 </section>
 
+
+
+<!-- =========================
+     PUBLICATIONS
+========================= -->
 
 <section id="publications">
 
-  <h2 class="section-title">Publications</h2>
+  <h2 class="section-title">
+    Publications
+  </h2>
 
   <p>
-    My research has been published in venues including
-    ACM CHI and Proceedings of the ACM on Human-Computer Interaction
-    (PACMHCI/CSCW).
+    My research spans Human-Computer Interaction, information credibility,
+    misinformation, social media, privacy, and digital technologies.
   </p>
 
   <p>
-    A full publication list will be added here.
-  </p>
-
-</section>
-
-
-<section id="teaching">
-
-  <h2 class="section-title">Teaching</h2>
-
-  <p>
-    I contribute to teaching and project supervision in Computer Science,
-    Data Science and Human-Computer Interaction, including postgraduate
-    capstone projects.
-  </p>
-
-</section>
-
-
-<section id="contact">
-
-  <h2 class="section-title">Contact</h2>
-
-  <p>
-    School of Computer Science<br>
-    The University of Sydney
+    My work has appeared in venues including
+    <strong>ACM CHI</strong>,
+    <strong>Proceedings of the ACM on Human-Computer Interaction
+    (PACMHCI / CSCW)</strong>,
+    and other international computing conferences.
   </p>
 
   <p>
-    Email:
-    <a href="mailto:waheeb.faizmohammad@sydney.edu.au">
-      waheeb.faizmohammad@sydney.edu.au
+    <a
+      href="https://scholar.google.com/citations?user=47rTe_AAAAAJ&amp;hl=en"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      View my complete publication profile on Google Scholar →
     </a>
   </p>
 
 </section>
 
 
+
+<!-- =========================
+     TEACHING
+========================= -->
+
+<section id="teaching">
+
+  <h2 class="section-title">
+    Teaching &amp; Supervision
+  </h2>
+
+  <p>
+    I contribute to university teaching, student supervision, and
+    project-based learning across Computer Science and Data Science.
+  </p>
+
+  <p>
+    My teaching includes postgraduate capstone projects, where I support
+    student teams through project definition, research and technical
+    development, evaluation, presentations, and communication of
+    project outcomes.
+  </p>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+  <h2 class="section-title">
+    Contact
+  </h2>
+
+  <p>
+    School of Computer Science
+    <br>
+    Faculty of Engineering
+    <br>
+    The University of Sydney
+  </p>
+
+
+  <div class="contact-links">
+
+
+    <p>
+
+      <strong>Email:</strong>
+
+      <a href="mailto:waheeb.faizmohammad@sydney.edu.au">
+        waheeb.faizmohammad@sydney.edu.au
+      </a>
+
+    </p>
+
+
+    <p>
+
+      <strong>Google Scholar:</strong>
+
+      <a
+        href="https://scholar.google.com/citations?user=47rTe_AAAAAJ&amp;hl=en"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View profile
+      </a>
+
+    </p>
+
+
+    <p>
+
+      <strong>ORCID:</strong>
+
+      <a
+        href="https://orcid.org/0000-0002-7506-3204"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        0000-0002-7506-3204
+      </a>
+
+    </p>
+
+
+    <p>
+
+      <strong>LinkedIn:</strong>
+
+      <a
+        href="https://www.linkedin.com/in/waheebyaqub/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        linkedin.com/in/waheebyaqub
+      </a>
+
+    </p>
+
+
+    <p>
+
+      <strong>GitHub:</strong>
+
+      <a
+        href="https://github.com/waheebyaqub"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        github.com/waheebyaqub
+      </a>
+
+    </p>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
+
   © 2026 Waheeb Yaqub
+
 </footer>
 
+
 </body>
+
 </html>
